@@ -53,6 +53,11 @@ body {
    color: #102746;
 }
 
+img {
+   max-width: 100%;
+   height: auto;
+}
+
 .header {
    position: fixed;
    top: 0;
@@ -60,9 +65,34 @@ body {
    width: 100%;
 }
 
+
 .wrapper {
    max-width: 1060px;
    margin: 0 auto;
+}
+
+.wrapper-full {
+   max-width: 1262px;
+   margin: 0 auto;
+}
+
+.section-title {
+   font-weight: 500;
+   font-size: 35px;
+   line-height: 42px;
+   position: relative;
+   padding-bottom: 10px;
+}
+
+.section-title::after {
+   display: block;
+   content: "";
+   width: 253px;
+   height: 3px;
+   background-color: #006DFE;
+   position: absolute;
+   bottom: 0;
+   left: 0;
 }
 
 /* Header start*/
@@ -179,6 +209,11 @@ body {
 /* intro end*/
 
 /*benefits styles start*/
+
+.benefits {
+   margin-bottom: 131px;
+}
+
 .benefits__wrap {
    position: relative;
    max-width: 1262px;
@@ -204,7 +239,86 @@ body {
    display: grid;
    grid-template-columns: repeat(3, 1fr);
    grid-column-gap: 55px;
+   padding: 0 100px;
 }
 
+.benefits__card {
+   grid-column: span 1;
+   padding-bottom: 112px;
+}
+
+.benefits__card-pic {
+   margin-bottom: 37px;
+   max-width: 66px;
+}
+
+.benefits__card-thumb {
+   display: block;
+}
+
+.benefits__card-title {
+   font-weight: 500;
+   font-size: 18px;
+   line-height: 24px;
+   margin-bottom: 26px;
+}
+
+.benefits__card-desc {
+   font-size: 16px;
+   line-height: 24px;
+   margin-bottom: 39px;
+}
+
+.benefits__card-more {
+   display: inline-block;
+   padding-right: 59px;
+   color: 006DFE;
+   font-size: 16px;
+   line-height: 24px;
+   text-decoration: none;
+   background: url(/img/svg/arrow-right-icon.svg) no-repeat 95% center;
+}
+
+.benefits__card-more:hover,
+.benefits__card-more:focus {
+   background: url(/img/svg/arrow-right-icon.svg) no-repeat right center;
+   opacity: 0.8;
+   transform: scale(1.05);
+   transition: 0.2s all;
+}
 
 /*benefits styles end*/
+
+/* Places start */
+
+.places__caption {
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+   justify-content: space-between;
+   margin-bottom: 36px;
+}
+
+.places__title {
+   margin-right: 15px;
+}
+
+.places__view-all {
+   display: inline-block;
+   padding-right: 59px;
+   color: 006DFE;
+   font-size: 16px;
+   line-height: 24px;
+   text-decoration: none;
+   background: url(/img/svg/arrow-right-icon.svg) no-repeat right center;
+}
+
+.places__view-all:hover,
+.places__view-all:focus {
+   background: url(/img/svg/arrow-right-icon.svg) no-repeat right center;
+   opacity: 0.8;
+   transform: scale(1.05);
+   transition: 0.2s all;
+}
+
+/* Places end */
