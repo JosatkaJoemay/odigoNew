@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 /* lato-regular - latin */
 @font-face {
    font-family: 'Lato';
@@ -35,12 +42,14 @@
 }
 
 html {
+   -webkit-box-sizing: border-box;
    box-sizing: border-box;
 }
 
 *,
 *::after,
 *::before {
+   -webkit-box-sizing: inherit;
    box-sizing: inherit;
 }
 
@@ -95,6 +104,8 @@ img {
    top: 0;
    left: 0;
    width: 100%;
+   -webkit-transition: 0.2s linear;
+   -o-transition: 0.2s linear;
    transition: 0.2s linear;
    padding-bottom: 10px;
    z-index: 5;
@@ -106,20 +117,35 @@ img {
 
 .header__wrapper {
    padding-top: 56px;
+   display: -webkit-box;
+   display: -ms-flexbox;
    display: flex;
+   -ms-flex-wrap: wrap;
    flex-wrap: wrap;
+   -webkit-box-align: end;
+   -ms-flex-align: end;
    align-items: flex-end;
+   -webkit-box-pack: justify;
+   -ms-flex-pack: justify;
    justify-content: space-between;
 }
 
 .header__nav {
+   display: -webkit-box;
+   display: -ms-flexbox;
    display: flex;
+   -ms-flex-wrap: wrap;
    flex-wrap: wrap;
+   -webkit-transition: 0.2s all linear;
+   -o-transition: 0.2s all linear;
    transition: 0.2s all linear;
 }
 
 .header__list {
+   display: -webkit-box;
+   display: -ms-flexbox;
    display: flex;
+   -ms-flex-wrap: wrap;
    flex-wrap: wrap;
 }
 
@@ -166,6 +192,8 @@ img {
 
 .burger__line_second {
    top: 50%;
+   -webkit-transform: translateY(-50%);
+   -ms-transform: translateY(-50%);
    transform: translateY(-50%);
 }
 
@@ -179,7 +207,7 @@ img {
 
 .intro {
    min-height: 100vh;
-   background: url(/img/intro-img.png) no-repeat center;
+   background: url(/img/intro-img-min.png) no-repeat center;
    background-size: cover;
    padding-top: 263px;
    padding-bottom: 290px;
@@ -203,7 +231,10 @@ img {
 }
 
 .search-form__info {
+   display: -webkit-box;
+   display: -ms-flexbox;
    display: flex;
+   -ms-flex-wrap: wrap;
    flex-wrap: wrap;
 }
 
@@ -218,6 +249,22 @@ img {
    font-size: 18px;
    line-height: 24px;
    color: white;
+}
+
+.search-form__field::-webkit-input-placeholder {
+   color: #FFFFFF;
+}
+
+.search-form__field::-moz-placeholder {
+   color: #FFFFFF;
+}
+
+.search-form__field:-ms-input-placeholder {
+   color: #FFFFFF;
+}
+
+.search-form__field::-ms-input-placeholder {
+   color: #FFFFFF;
 }
 
 .search-form__field::placeholder {
@@ -254,6 +301,7 @@ img {
    max-width: 1262px;
    background-color: white;
    margin: 0 auto;
+   -webkit-box-shadow: 0px 2px 20px rgba(21, 24, 36, 0.15993);
    box-shadow: 0px 2px 20px rgba(21, 24, 36, 0.15993);
 }
 
@@ -266,18 +314,23 @@ img {
    font-size: 35px;
    line-height: 42px;
    padding: 93px 100px 88px 100px;
+   -webkit-transform: translateY(-100%);
+   -ms-transform: translateY(-100%);
    transform: translateY(-100%);
    background-color: white;
 }
 
 .benefits__cards {
+   display: -ms-grid;
    display: grid;
+   -ms-grid-columns: 1fr 55px 1fr 55px 1fr;
    grid-template-columns: repeat(3, 1fr);
    gap: 55px;
    padding: 0 100px;
 }
 
 .benefits__card {
+   -ms-grid-column-span: 1;
    grid-column: span 1;
    padding-bottom: 112px;
 }
@@ -317,7 +370,11 @@ img {
 .benefits__card-more:focus {
    background: url(/img/svg/arrow-right-icon.svg) no-repeat right center;
    opacity: 0.8;
+   -webkit-transform: scale(1.05);
+   -ms-transform: scale(1.05);
    transform: scale(1.05);
+   -webkit-transition: 0.2s all;
+   -o-transition: 0.2s all;
    transition: 0.2s all;
 }
 
@@ -329,9 +386,16 @@ img {
 }
 
 .places__caption {
+   display: -webkit-box;
+   display: -ms-flexbox;
    display: flex;
+   -ms-flex-wrap: wrap;
    flex-wrap: wrap;
+   -webkit-box-align: center;
+   -ms-flex-align: center;
    align-items: center;
+   -webkit-box-pack: justify;
+   -ms-flex-pack: justify;
    justify-content: space-between;
    margin-bottom: 36px;
 }
@@ -354,13 +418,19 @@ img {
 .places__view-all:focus {
    background: url(/img/svg/arrow-right-icon.svg) no-repeat right center;
    opacity: 0.8;
+   -webkit-transform: scale(1.05);
+   -ms-transform: scale(1.05);
    transform: scale(1.05);
+   -webkit-transition: 0.2s all;
+   -o-transition: 0.2s all;
    transition: 0.2s all;
 }
 
 
 .places__cards {
+   display: -ms-grid;
    display: grid;
+   -ms-grid-columns: 1fr 10px 1fr 10px 1fr 10px 1fr 10px 1fr 10px 1fr;
    grid-template-columns: repeat(6, 1fr);
    gap: 10px;
 }
@@ -383,29 +453,37 @@ img {
 }
 
 .places__card:hover .places__card-pic {
+   -webkit-transform: scale(1.05);
+   -ms-transform: scale(1.05);
    transform: scale(1.05);
 }
 
 .places__card_size_lg {
+   -ms-grid-column-span: 3;
    grid-column: span 3;
 }
 
 .places__card_size_small {
+   -ms-grid-column-span: 2;
    grid-column: span 2;
 }
 
 .places__card-pic {
    width: 100%;
+   -webkit-transition: 0.15s;
+   -o-transition: 0.15s;
    transition: 0.15s;
 }
 
 .places__card-pic_size_lg {
    height: 364px;
+   -o-object-fit: cover;
    object-fit: cover;
 }
 
 .places__card-pic_size_small {
    height: 283px;
+   -o-object-fit: cover;
    object-fit: cover;
 }
 
@@ -438,9 +516,13 @@ img {
 }
 
 .tours__tour {
+   display: -ms-grid;
    display: grid;
+   -ms-grid-columns: 1fr 108px 1fr;
    grid-template-columns: repeat(2, 1fr);
    gap: 0 108px;
+   -webkit-box-align: center;
+   -ms-flex-align: center;
    align-items: center;
    margin-bottom: 80px;
 }
@@ -478,7 +560,11 @@ img {
 .tour__more:hover,
 .tour__more:focus {
    opacity: 0.8;
+   -webkit-transform: scale(1.05);
+   -ms-transform: scale(1.05);
    transform: scale(1.05);
+   -webkit-transition: 0.2s all;
+   -o-transition: 0.2s all;
    transition: 0.2s all;
 }
 
@@ -507,15 +593,23 @@ img {
 }
 
 .top__cards {
+   display: -ms-grid;
    display: grid;
+   -ms-grid-columns: 1fr 57px 1fr 57px 1fr 57px 1fr 57px 1fr 57px 1fr;
    grid-template-columns: repeat(6, 1fr);
    gap: 57px;
 }
 
 .top__card {
    /* Для больших текстов и выравния высоты всех карточек*/
+   display: -webkit-box;
+   display: -ms-flexbox;
    display: flex;
+   -webkit-box-orient: vertical;
+   -webkit-box-direction: normal;
+   -ms-flex-direction: column;
    flex-direction: column;
+   -ms-grid-column-span: 2;
    grid-column: span 2;
 }
 
@@ -524,9 +618,16 @@ img {
 }
 
 .top__card-stats {
+   display: -webkit-box;
+   display: -ms-flexbox;
    display: flex;
+   -ms-flex-wrap: wrap;
    flex-wrap: wrap;
+   -webkit-box-pack: end;
+   -ms-flex-pack: end;
    justify-content: flex-end;
+   -webkit-box-align: center;
+   -ms-flex-align: center;
    align-items: center;
    position: absolute;
    bottom: 0;
@@ -627,7 +728,10 @@ img {
 }
 
 .footer__item {
+   display: -webkit-box;
+   display: -ms-flexbox;
    display: flex;
+   -ms-flex-wrap: wrap;
    flex-wrap: wrap;
 }
 
@@ -636,8 +740,13 @@ img {
 }
 
 .footer__nav {
+   display: -webkit-box;
+   display: -ms-flexbox;
    display: flex;
+   -ms-flex-wrap: wrap;
    flex-wrap: wrap;
+   -webkit-box-pack: justify;
+   -ms-flex-pack: justify;
    justify-content: space-between;
    width: 50%;
 }
@@ -689,19 +798,24 @@ img {
    }
 
    .benefits__wrap {
+      -webkit-box-shadow: none;
       box-shadow: none;
    }
 
    .places__card_size_lg {
+      -ms-grid-column-span: 6;
       grid-column: span 6;
       height: 283px;
    }
 
    .places__card-pic_size_lg {
+      -webkit-transform: translateY(-81px);
+      -ms-transform: translateY(-81px);
       transform: translateY(-81px);
    }
 
    .places__card_size_small {
+      -ms-grid-column-span: 6;
       grid-column: span 6;
    }
 
@@ -719,6 +833,7 @@ img {
    }
 
    .top__card {
+      -ms-grid-column-span: 3;
       grid-column: span 3;
    }
 
@@ -728,16 +843,20 @@ img {
 
    .top__card {
       /* Для больших текстов и выравния высоты всех карточек*/
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
       flex-direction: column;
+      -ms-grid-column-span: 3;
       grid-column: span 3;
    }
 
    .footer {
       padding: 24px 0;
    }
-
-   .footer__logo {}
 }
 
 @media screen and (max-width: 767px) {
@@ -747,6 +866,8 @@ img {
 
    .header__wrapper {
       padding-top: 22px;
+      -webkit-transition: 0.2s all linear;
+      -o-transition: 0.2s all linear;
       transition: 0.2s all linear;
    }
 
@@ -759,12 +880,19 @@ img {
       background-color: #000;
       z-index: 10;
       padding: 75px;
+      -ms-flex-line-pack: start;
       align-content: flex-start;
+      -webkit-transform: translateX(100%);
+      -ms-transform: translateX(100%);
       transform: translateX(100%);
    }
 
    .header__nav_active {
+      -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
       transform: translateX(0);
+      -webkit-transition: 0.2s all linear;
+      -o-transition: 0.2s all linear;
       transition: 0.2s all linear;
    }
 
@@ -802,14 +930,16 @@ img {
    }
 
    .header__nav-close-line:first-child {
+      -webkit-transform: translateY(-50%) rotate(45deg);
+      -ms-transform: translateY(-50%) rotate(45deg);
       transform: translateY(-50%) rotate(45deg);
    }
 
    .header__nav-close-line:last-child {
+      -webkit-transform: translateY(50%) rotate(135deg);
+      -ms-transform: translateY(50%) rotate(135deg);
       transform: translateY(50%) rotate(135deg);
    }
-
-
 }
 
 @media screen and (max-width: 420px) {
@@ -822,8 +952,14 @@ img {
    }
 
    .benefits__card {
+      -ms-grid-column-span: 3;
       grid-column: span 3;
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
       flex-direction: column;
       padding-bottom: 10px;
    }
@@ -847,6 +983,22 @@ img {
    .search-form__field {
       width: 100%;
       margin-right: 0;
+   }
+
+   .search-form__field::-webkit-input-placeholder {
+      font-size: 16px;
+   }
+
+   .search-form__field::-moz-placeholder {
+      font-size: 16px;
+   }
+
+   .search-form__field:-ms-input-placeholder {
+      font-size: 16px;
+   }
+
+   .search-form__field::-ms-input-placeholder {
+      font-size: 16px;
    }
 
    .search-form__field::placeholder {
@@ -879,15 +1031,18 @@ img {
    }
 
    .tour__pic_mob-first {
+      -ms-grid-row: 1;
       grid-row-start: 1;
    }
 
    .tour__pic,
    .tour__info {
+      -ms-grid-column-span: 2;
       grid-column: span 2;
    }
 
    .top__card {
+      -ms-grid-column-span: 6;
       grid-column: span 6;
    }
 
@@ -913,6 +1068,6 @@ img {
       width: 50%;
       margin-bottom: 25px;
    }
+}
 
-
-   /* Media end */
+/* Media end */
